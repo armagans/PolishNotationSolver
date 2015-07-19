@@ -1,6 +1,6 @@
-﻿/*
+/*
 
-Copyright 2015 Armağan Salman
+Copyright 2015 ArmaÄŸan Salman
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -77,7 +77,7 @@ double MathematicalExpression::evaluateTerm(char op, double operand1, double ope
 double MathematicalExpression::evaluate()
 {
     string errorMessage = expressionErrorMessage(this->expression);
-    if(errorMessage.empty()) // Hata mesaji bossa ifade hatasiz demektir. İslemler gerceklestirilmeli.
+    if(errorMessage.empty()) // Hata mesaji bossa ifade hatasiz demektir. Ä°slemler gerceklestirilmeli.
     {
         if(isResultCalculated)
         {
@@ -121,7 +121,7 @@ double MathematicalExpression::evaluate(string expression)
     // Bosluksa atla,
     // '(' ise bir sonraki indisteki operatoru stack'e at,
     // ')' ise sayi stack'inden iki sayi, operator stack'inden bir operator al. Islemi hesapla.
-    // Usttekilerden biri degilse sayinin baslangici olmak zorundadır. Sayiyi strtod ile al. strtod'un ikinci parametresi ile sayidan sonraki karaktere eris. Onun indisini bul. Ana indisi bulunan deger yap.
+    // Usttekilerden biri degilse sayinin baslangici olmak zorundadÄ±r. Sayiyi strtod ile al. strtod'un ikinci parametresi ile sayidan sonraki karaktere eris. Onun indisini bul. Ana indisi bulunan deger yap.
     while(index < expression.length())
     {
         index = skipBlankChars(expression, index);
@@ -209,7 +209,7 @@ string MathematicalExpression::expressionErrorMessage(string expr)
         {
             parans--;
             operators--;
-            operands--; // �ki deger kullanip bir deger yazildigindan bir azalmali.
+            operands--; // Ýki deger kullanip bir deger yazildigindan bir azalmali.
             i++;
         }
         else // Sayi olmali
