@@ -77,24 +77,24 @@ double MathematicalExpression::evaluateTerm(char op, double operand1, double ope
 double MathematicalExpression::evaluate()
 {
     string errorMessage = expressionErrorMessage(this->expression);
-    if(errorMessage.empty()) // Hata mesaji bossa ifade hatasiz demektir. Ä°slemler gerceklestirilmeli.
-    {
-        if(isResultCalculated)
-        {
-            cout << this->expression << " = " << this->result << endl;
-            return this->result;
-        }
-        else
-        {
-            this->result = this->evaluate(this->expression);
-            this->isResultCalculated = true;
-            return this->result;
-        }
-    }
-    else // Hata varsa bas.
+    if(!errorMessage.empty())
     {
         cout << errorMessage << endl;
+        return 0;
     }
+    
+   // Hata mesaji bossa ifade hatasiz demektir. İşlemler gerceklestirilmeli.
+     if(isResultCalculated)
+     {
+         cout << this->expression << " = " << this->result << endl;
+         return this->result;
+     }
+     else
+     {
+         this->result = this->evaluate(this->expression);
+         this->isResultCalculated = true;
+         return this->result;
+     }
 }
 
 double MathematicalExpression::evaluate(string expression)
