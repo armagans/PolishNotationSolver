@@ -2,6 +2,9 @@
 A C++ project that computes mathematical expressions given in Polish notation(with paranthesis).
 
 Parses numerical values as doubles.
+
+This project was given to Bil142 students at TOBB ETU as 5th homework in the summer term of 2015.
+
 ## Examples
 (+ 2 3) = 5
 
