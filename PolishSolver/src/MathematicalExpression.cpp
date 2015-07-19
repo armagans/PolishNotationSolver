@@ -93,7 +93,7 @@ double MathematicalExpression::evaluate()
     }
     else // Hata varsa bas.
     {
-        cout << errorMessage;
+        cout << errorMessage << endl;
     }
 }
 
