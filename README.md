@@ -1,5 +1,5 @@
 # PolishNotationSolver
-A C++ project that computes mathematical expressions given in Polish notation(with paranthesis).
+A C++ project that computes mathematical expressions given in Polish notation(with parenthesis).
 
 Parses numerical values as doubles.
 
